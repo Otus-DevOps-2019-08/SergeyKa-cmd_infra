@@ -2,13 +2,13 @@
 
 ## Working with Travis CI & Github & Slack integration for process monitoring
 # Prerequisites for testing repository:
-    + Cloned repository from [OTUS Worspace]<https://github.com/Otus-DevOps-2019-08/SergeyKa-cmd_infra>
+   + Cloned repository from [OTUS Worspace]<https://github.com/Otus-DevOps-2019-08/SergeyKa-cmd_infra>
      $ git checkout -b play-travis
-    + Created directory .github containing PR Template.md file in ./SergeyKa-cmd_infa folder
+   + Created directory .github containing PR Template.md file in ./SergeyKa-cmd_infa folder
      $ wget http://bit.ly/otus-pr-template -O PULL_REQUEST_TEMPLATE.md
-    + #sergey_karakulanov Slack channel subscribed for Travis CI&Github connectivity
+   + #sergey_karakulanov Slack channel subscribed for Travis CI&Github connectivity
      /github subscribe Otus-DevOps-2019-08/<GITHUB_USER>_infra commits:all
-    + Placing test file prepared for Travic CI automation process to ./play-travis folder
+   + Placing test file prepared for Travic CI automation process to ./play-travis folder
      [test.py]<https://raw.githubusercontent.com/express42/otus-snippets/master/hw-04/test.py>
  _______________________________________________________________________________________________
 Issues with ruby installation:
@@ -16,4 +16,12 @@ Issues with ruby installation:
  $ sudo gem install travis -V
   Also need correct DNS configuration to default 8.8.8.8, 8.8.4.4
 
-SergeyKa-cmd Infra repository
+# Preparation of Travis CI notification in Slack
+ File .travic.yml should contain generated public key ater command:
+ $ travis encrypt "devops-team-otus:<mytoken from Travis CI plugin in Slack>#<sergey_karakulanov>"
+    \--add notifications.slack.rooms --c
+    
+# Build monitoring in Travis CI
+ [Link]<https://travis-ci.com/Otus-DevOps-2019-08/SergeyKa_cmd_infra>
+    
+

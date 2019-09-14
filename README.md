@@ -3,12 +3,16 @@
 ## Working with Travis CI & Github & Slack integration for process monitoring
 # Prerequisites for testing repository:
    + Cloned repository from [OTUS Workspace](https://github.com/Otus-DevOps-2019-08/SergeyKa-cmd_infra)
+     
      $ git checkout -b play-travis
    + Created directory .github containing PR Template.md file in ./SergeyKa-cmd_infa folder
+     
      $ wget http://bit.ly/otus-pr-template -O PULL_REQUEST_TEMPLATE.md
    + #sergey_karakulanov Slack channel subscribed for Travis CI&Github connectivity
+     
      /github subscribe Otus-DevOps-2019-08/<GITHUB_USER>_infra commits:all
    + Placing test file prepared for Travic CI automation process to ./play-travis folder
+     
      [test.py](https://raw.githubusercontent.com/express42/otus-snippets/master/hw-04/test.py) - Python test file
  _______________________________________________________________________________________________
 Issues with ruby installation:

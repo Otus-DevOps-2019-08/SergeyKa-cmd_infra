@@ -1,41 +1,19 @@
 # SergeyKa-cmd_infra
 
-## Homework for 4 lesson
-+ Slack+Travis connectivity issues: no notifications on #sergey_karakulanov Slack channel
-+ gem install travis issues:
-________________________________________________________________________________________________
-Terminal tracking:
-sergeyka@ubuntux940  ~/Downloads/rubygems-3.0.6  gem install travis -V
-Getting SRV record failed: DNS result has no information for _rubygems._tcp.rubygems.org
-HEAD https://rubygems.org/api/v1/dependencies
-200 OK
-GET https://rubygems.org/api/v1/dependencies?gems=travis
-200 OK
-Getting SRV record failed: DNS result has no information for _rubygems._tcp.rubygems.org
-GET https://rubygems.org/quick/Marshal.4.8/travis-1.8.10.gemspec.rz
-200 OK
-GET https://rubygems.org/api/v1/dependencies?gems=backports,faraday,faraday_middleware,gh,highline,launchy,pusher-client,typhoeus
-200 OK
-GET https://rubygems.org/api/v1/dependencies?gems=ethon
-200 OK
-GET https://rubygems.org/api/v1/dependencies?gems=multipart-post
-200 OK
-GET https://rubygems.org/api/v1/dependencies?gems=addressable,multi_json,net-http-persistent,net-http-pipeline
-200 OK
-GET https://rubygems.org/api/v1/dependencies?gems=ffi
-200 OK
-GET https://rubygems.org/api/v1/dependencies?gems=json,websocket
-200 OK
-GET https://rubygems.org/quick/Marshal.4.8/multipart-post-2.1.1.gemspec.rz
-200 OK
-Downloading gem multipart-post-2.1.1.gem
-GET https://rubygems.org/gems/multipart-post-2.1.1.gem
-Fetching: multipart-post-2.1.1.gem (100%)
-200 OK
-ERROR:  While executing gem ... (Gem::FilePermissionError)
-    # You don't have write permissions for the /var/lib/gems/2.5.0 directory.
-____________________________________________________________________________________________
-+ using sudo gem install travis -V & DNS configured to default 8.8.8.8, 8.8.4.4 fixed issues
-
+## Working with Travis CI & Github & Slack integration for process monitoring
+# Prerequisites for testing repository:
+    + Cloned repository from [OTUS Worspace]<https://github.com/Otus-DevOps-2019-08/SergeyKa-cmd_infra>
+     $ git checkout -b play-travis
+    + Created directory .github containing PR Template.md file in ./SergeyKa-cmd_infa folder
+     $ wget http://bit.ly/otus-pr-template -O PULL_REQUEST_TEMPLATE.md
+    + #sergey_karakulanov Slack channel subscribed for Travis CI&Github connectivity
+     /github subscribe Otus-DevOps-2019-08/<GITHUB_USER>_infra commits:all
+    + Placing test file prepared for Travic CI automation process to ./play-travis folder
+     [test.py]<https://raw.githubusercontent.com/express42/otus-snippets/master/hw-04/test.py>
+ _______________________________________________________________________________________________
+Issues with ruby installation:
++ for proper installing ruby packets used this command:
+ $ sudo gem install travis -V
+  Also need correct DNS configuration to default 8.8.8.8, 8.8.4.4
 
 SergeyKa-cmd Infra repository

@@ -5,7 +5,7 @@
 
 ## System prerequisites:
   + Prepare for python local environment not less than 2.7;
-  + Prepare Ansible environment for your OS [Ansible install] (https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html);
+  + Prepare Ansible environment for your OS [Ansible install](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html);
 ## App testing for additional task:
   + For C++parse.cpp script use bash command:
     

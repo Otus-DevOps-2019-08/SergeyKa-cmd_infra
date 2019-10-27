@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Otus-DevOps-2019-08/SergeyKa-cmd_infra.svg?branch=master)](https://travis-ci.org/Otus-DevOps-2019-08/SergeyKa-cmd_infra)
 # SergeyKa-cmd_infra
 ## GCP environment deployment using Packer
 ### Main issue: preparing custom JSON configuration files for private image processing

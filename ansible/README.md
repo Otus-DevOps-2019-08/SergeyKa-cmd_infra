@@ -1,6 +1,7 @@
 ## Contents:
   # 1. Ansible first look
   # 2. Ansible: advanced deployment and configuration management
+  # 3. Ansible: working with roles and environments, Travis CI integration
   ______________________________________________________________
 ## Ansible first look
 ### Main issue: preparing Ansible environment and simple playbook
@@ -33,3 +34,32 @@ ________________________________________________________________________________
     $ansible -i inventory.gcp.yml all --list
     
     $ansible -i inventory.gcp.yml all -m ping
+______________________________________________________________________________________________________________________________
+  ## Ansible: working with roles and environments, Travis CI integration
+  ### Main issue: Playbooks separation to assigned roles and using nginx community role in project
+  ### Additional task: Using dynamic inventory in site playbooks and Trytravis implementation in local github repository
+  ## System prerequisites:
+  + Clone this repository to local host
+  + Remove all GCP instances from previous tasks using terraform destroy
+  + Use ansible-galaxy to install [nginx role](https://github.com/jdauphant/ansible-role-nginx) 
+  + Add to .gitinfnore jdauphant.nginx.
+  + Encrypt files, key writed in ansible.cfg:
+  
+    $ ansible-vault encrypt environments/prod/credentials.yml
+    $ ansible-vault encrypt environments/stage/credentials.yml
+  + Prepare enironment for using Travis CI in local repository using [Manual](https://github.com/SethMichaelLarson/trytravis)
+  + Setup trytravis $ trytravis --repo https://github.com/[USERNAME]/[REPOSITORY]
+   
+  ## App testing for additional task:
+  + Run site.yml playbook like:
+  
+     $ > ansible-playbook -i environments/prod/gce.py playbooks/site.yml
+      ...
+      PLAY RECAP *******************************************************************
+      reddit-app                 : ok=27   changed=18   unreachable=0    failed=0
+      reddit-db                  : ok=4    changed=2    unreachable=0    failed=0
+  + Checkout current inventory in [Google Cloud Console](https://console.cloud.google.com/compute)
+  + Proceed to Reddit app web with http://35.240.20.73
+  + Trytravis implementation in [local github repository](https://github.com/SergeyKa-cmd/trytravis-owntarget)
+    $ trytravis 
+  ______________________________________________________________________________________________________________________________ 

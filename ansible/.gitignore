@@ -8,3 +8,10 @@ jdauphant.nginx
 .venv
 venv
 variables.json
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache

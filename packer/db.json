@@ -3,7 +3,7 @@
          {
              "type": "googlecompute",
              "project_id": "{{user `project_id`}}",
-             "image_name": "reddit-app",
+             "image_name": "reddit-db",
              "image_family": "reddit-base",
              "source_image_family": "{{user `source_image_family`}}",
              "zone": "europe-west1-b",
@@ -17,14 +17,12 @@
          
      ],
      "provisioners": [
-         {
-             "type": "ansible",
-             "playbook_file": "ansible/playbooks/packer_app.yml",
-            "extra_arguments": ["--tags","-ruby"],
+        {
+            "type": "ansible",
+             "playbook_file": "ansible/playbooks/packer_db.yml",
+            "extra_arguments": ["--tags","-mongo"],
             "ansible_env_vars": [
                 "ANSIBLE_ROLES_PATH=./ansible/roles"
-            ]
-        }
     ]
- }
+}
  

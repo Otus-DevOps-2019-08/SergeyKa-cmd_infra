@@ -11,7 +11,7 @@
              "machine_type": "{{user `machine_type`}}",
              "image_description": "{{user `image_description`}}",
              "disk_type": "{{user `disk_type`}}",
-             "disk_size": "{{user `disk_size`}}",
+             "disk_size": 10,
              "tags": "{{user `tags`}}"
          }
          

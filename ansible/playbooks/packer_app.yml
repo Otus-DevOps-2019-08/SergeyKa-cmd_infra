@@ -1,6 +1,8 @@
+---
 - name: Install Ruby && Bundler
   hosts: all
   become: true
 
   roles:
     - app
+    - jdauphant.nginx

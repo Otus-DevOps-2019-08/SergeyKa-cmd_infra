@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "project_id": "project-123",
     "source_image_family": "ubuntu-1604-lts",
     "machine_type": "google machine type",
@@ -8,3 +9,13 @@
     "network_project_id": "project-123-NIC0",
     "tags": "server"
 }
+=======
+    "project_id_gcp": "Like myproject-12345",
+    "source_image_family": "like ubuntu-1604-lts",
+    "machine_type": "Like f1-micro",
+    "image_description": "Someshit maker",
+    "disk_type": "pd-standard or pd-ssd",
+    "network_project_id": "your project_id-NIC0",
+    "tags": "http-server, LAMP"
+}  
+>>>>>>> ad80179fc29632c404ac449066500b1c5c9d5af9

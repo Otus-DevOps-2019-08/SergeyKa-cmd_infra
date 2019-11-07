@@ -2,6 +2,7 @@
 - name: Mongodb install
   hosts: all
   become: true 
+  
   roles:
-    - name: Ansible-db-local
+    - Ansible-db-local
 ...

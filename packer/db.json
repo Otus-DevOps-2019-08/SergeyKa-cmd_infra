@@ -1,10 +1,6 @@
 {
     "builders": [
-<<<<<<< HEAD
         {
-=======
-         {
->>>>>>> ad80179fc29632c404ac449066500b1c5c9d5af9
              "type": "googlecompute",
              "project_id": "{{user `project_id`}}",
              "image_name": "reddit-db",
@@ -15,32 +11,17 @@
              "machine_type": "{{user `machine_type`}}",
              "image_description": "{{user `image_description`}}",
              "disk_type": "{{user `disk_type`}}",
-<<<<<<< HEAD
              "disk_size": "{{user `disk_size`}}",
              "tags": "{{user `tags`}}"
         }
-=======
-             "disk_size": 10,
-             "tags": "{{user `tags`}}"
-         }
->>>>>>> ad80179fc29632c404ac449066500b1c5c9d5af9
          
      ],
      "provisioners": [
         {
             "type": "ansible",
-<<<<<<< HEAD
             "extra_arguments": ["--tags","-mongo"],
             "ansible_env_vars": ["ANSIBLE_ROLES_PATH=../ansible/roles"],
             "playbook_file": "../ansible/playbooks/packer_db.yml"
         }
         ]         
 }
-=======
-             "playbook_file": "ansible/playbooks/packer_db.yml",
-            "extra_arguments": ["--tags","-mongo"],
-            "ansible_env_vars": ["ANSIBLE_ROLES_PATH={{ pwd }}/ansible/roles"]
-        }
-       ]
-}
->>>>>>> ad80179fc29632c404ac449066500b1c5c9d5af9

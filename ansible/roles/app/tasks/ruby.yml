@@ -1,6 +1,6 @@
 ---
 - name: Ruby & RubyGems installation required packages
-  apt: "name={{item}} state=present update_cache=yes"
+  apt: "name={{ item }} state=present update_cache=yes"
   with_items:
     - ruby-full
     - ruby-bundler

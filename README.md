@@ -27,4 +27,3 @@
   
       $ packer build -var-file=variables.json immutable.json
   + For instance from baked image deployment use gcloud cmdlet in bash [Link to Gist](https://gist.githubusercontent.com/SergeyKa-cmd/b24ae20b275bfb8e49da426bebceb621/raw/0090e03f85b60547c94c56737e10a4aef0e838a6/create-reddit-%2520vm.sh)
-  

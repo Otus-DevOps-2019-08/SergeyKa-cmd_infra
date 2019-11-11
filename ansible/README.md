@@ -1,7 +1,9 @@
+[![Build Status](https://travis-ci.com/Otus-DevOps-2019-08/SergeyKa-cmd_infra.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2019-08/SergeyKa-cmd_infra)
 ## Contents:
-  # 1. Ansible first look
-  # 2. Ansible: advanced deployment and configuration management
-  # 3. Ansible: working with roles and environments, Travis CI integration
+  ## 1. Ansible first look
+  ## 2. Ansible: advanced deployment and configuration management
+  ## 3. Ansible: working with roles and environments, Travis CI integration
+  ## 4. Ansible: roles and playbooks development, testing environments integration
   ______________________________________________________________
 ## Ansible first look
 ### Main issue: preparing Ansible environment and simple playbook
@@ -63,3 +65,25 @@ ________________________________________________________________________________
   + Trytravis implementation in [local github repository](https://github.com/SergeyKa-cmd/trytravis-owntarget)
     $ trytravis 
   ______________________________________________________________________________________________________________________________ 
+  ## Ansible: roles and playbooks development, testing environments integration
+  ### Main issue: Local environment deployment using Vagrant with Ansible roles and playbooks
+  ### Additional task: Place db role to separate repository with build tracking from travis-ci.org
+  ## System prerequisites:
+  + Clone this repository to local host
+  + Remove all GCP instances from previous tasks using terraform destroy
+  + Deploy [Vagrant](https://www.vagrantup.com/docs/installation/) and prepare environment with
+    
+    $vagrant init && vagrant up 
+  + Deploy [Packer](https://www.packer.io/intro/getting-started/install.html) for image creation with Ansible pre-built roles
+  
+    $pracker build -var-file=variables.json app.json
+  + Apply Travis CI with this [gist](https://gist.github.com/Artemmkin/e1c845e96589d5d71476f57ed931f1ac) to Encrypt credential files
+
+  ## App testing for additional task:
+  + Run vagrant using:
+  
+     $ $vagrant init && vagrant up 
+  + Checkout Reddit web interface with http://10.10.10.20
+  + Check current [Travis CI build status](https://travis-ci.org/SergeyKa-cmd/Ansible-db-local) ol local repository
+
+
